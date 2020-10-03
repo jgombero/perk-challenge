@@ -1,13 +1,173 @@
-body {
+/* GENERAL */
+
+html {
+  box-sizing: border-box;
+}
+
+h3 {
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+body, #root {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+body, input, select, textarea {
+  font-size: 1rem;
+  font-family: Helvetica, Arial, Helvetica, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "header"
+  "main"
+  "footer";
+  grid-template-rows: 5rem 1fr 5rem;
+  grid-template-columns: 1fr;
+}
+
+header {
+  grid-area: header;
+  background-color: darkgrey;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+header a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+header a:hover {
+  color: darkslateblue;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  background-color: darkgrey;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.main {
+  flex: 3 60vw;
+  padding: 0, 40px, 0, 20px;
+}
+
+.sidebar {
+  flex: 1 20vw;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+
+/* PRODUCTS */
+
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image {
+  width: 100%;
+}
+
+.product-title {
+  min-height: 3.5em;
+  text-align: center;
+}
+
+.product-price {
+  margin-right: 10px;
+}
+
+
+/* CART */
+
+
+.cart {
+  margin-left: 40px;
+}
+
+.cart-title {
+  margin: 0 5px 10px 5px;
+}
+
+
+/* BUTTONS */
+
+
+.button-primary {
+  background-color: lightskyblue;
+  border: solid 1px;
+  border-radius: 5px;
+}
+
+.button-secondary {
+  background-color: orangered;
+  border: solid 1px;
+  border-radius: 5px;
+}
+
+
+/* FORM */
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+.form label {
+  margin-top: 10px;
+}
+
+.form input {
+  margin-top: 5px;
+}
+
+.form button {
+  margin-top: 10px;
+}
+
+
+/* Order Receipt */
+
+
+.receipt-text {
+  text-align: center;
 }
